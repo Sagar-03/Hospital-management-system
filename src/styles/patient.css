@@ -436,3 +436,54 @@
   }
 
 }
+
+/* ---------- Top-right booking CTA inside profile card (yellow area) ---------- */
+.profile-top-right-cta {
+  position: absolute;
+  top: 22px;            /* adjust if your card padding differs */
+  right: 28px;          /* places button in the yellow area you circled */
+  z-index: 5;
+}
+
+/* ensure parent profile card has relative positioning so button can be absolutely positioned */
+.profile-main-card {
+  position: relative;
+}
+
+/* yellow CTA */
+.btn.btn-yellow {
+  background: linear-gradient(180deg,#ffd54a,#ffb300) !important;
+  color: #111 !important;
+  border: none !important;
+  padding: 10px 16px !important;
+  border-radius: 999px !important;
+  box-shadow: 0 8px 20px rgba(255, 181, 0, 0.12) !important;
+}
+
+/* keep small-inline adjustments */
+.small-inline { padding: 6px 10px !important; font-size: 13px !important; }
+
+/* booked/muted button */
+.btn.btn-muted { background: #f3f4f6 !important; color: #6b7280 !important; border: 1px solid #e5e7eb !important; }
+
+/* danger */
+.btn.btn-danger { background: #ef4444 !important; color: #fff !important; border: none !important; }
+
+/* doctor upload card spacing */
+.doctor-item { background:#fff; border-radius:12px; border:1px solid #eaeef2; padding:12px; display:flex; gap:12px; align-items:center; }
+
+/* tidy uploaded file list */
+.profile-side-column .card ul { margin: 0; padding: 0; }
+
+/* sidebar and primary button rules (ensure they still apply) */
+.doctor-sidebar { position: fixed !important; top: 0 !important; left: 0 !important; height: 100vh !important; width: 80vw !important; max-width: 100% !important; background: #ffffff !important; box-shadow: 4px 0 30px rgba(15, 23, 42, 0.12) !important; border-right: 1px solid #e5e7eb !important; z-index: 9999 !important; transform: translateX(-100%) !important; transition: transform 260ms cubic-bezier(.2,.9,.2,1) !important; overflow-y: auto !important; padding: 22px !important; border-radius: 0 18px 18px 0 !important; }
+.doctor-sidebar.open { transform: translateX(0) !important; pointer-events: auto !important; }
+.doctor-sidebar:not(.open) { pointer-events: none !important; }
+.sidebar-inner { position: relative; padding-bottom: 48px; }
+.sidebar-close { position: absolute !important; top: 12px !important; right: 12px !important; background: transparent !important; border: none !important; font-size: 22px !important; line-height: 1 !important; cursor: pointer !important; color: #6b7280 !important; padding: 6px 10px !important; border-radius: 999px !important; }
+.sidebar-close:hover { background: #f3f4f6 !important; color: #111827 !important; }
+
+/* preserve primary button color */
+.btn.btn-primary { background: linear-gradient(180deg,#0b84ff,#0066d6) !important; color: #fff !important; border: none !important; box-shadow: 0 10px 24px rgba(11,132,255,0.18) !important; }
+.card .btn.btn-primary { background: linear-gradient(180deg,#0b84ff,#0066d6) !important; color: #fff !important; }
+
